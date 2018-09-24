@@ -13,7 +13,7 @@ class MulticastHelloWorldServer(DatagramProtocol):
         # Set the TTL>1 so multicast will cross router hops:
         self.transport.setTTL(5)
         # Join a specific multicast group:
-        self.transport.joinGroup("127.0.0.1")
+        self.transport.joinGroup("228.0.0.5")
 
     def datagramReceived(self, datagram, address):
         print("Datagram %s received from %s" % (repr(datagram), repr(address)))
